@@ -44,7 +44,7 @@ export default function Contact() {
             <h2 className="text-5xl font-extrabold mb-4">Let's get in touch</h2>
           </div>
           <div className="md:w-1/2 text-gray-600 text-lg max-w-2xl mx-auto md:mx-0 md:text-left">
-            You can reach us anytime via info@codedrivenlabs.com
+            You can reach us anytime via info@jsmtech.com
           </div>
           {/* <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
@@ -209,9 +209,7 @@ export default function Contact() {
                         <div className="font-semibold">Contact Info</div>
                         <div className="text-gray-600">+91-8699820778 </div>
                         <div className="text-gray-600">+91-7717368146 </div>
-                        <div className="text-gray-600">
-                          info@codedrivenlabs.com
-                        </div>
+                        <div className="text-gray-600">info@jsmtech.com</div>
                       </div>
                     </div>
                   </div>
