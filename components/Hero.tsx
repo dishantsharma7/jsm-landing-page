@@ -36,7 +36,7 @@ export default function Hero() {
             </span>{" "}
             <span className="text-5xl lg:text-5xl font-bold mb-6 leading-tight">
               {" "}
-              Software & IOT Development{" "}
+              Software & IoT Development{" "}
               {/* <span className="text-blue-600"> Future</span> */}
             </span>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
