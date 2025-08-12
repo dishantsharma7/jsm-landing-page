@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -24,6 +25,37 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
+  // EmailJS integration
+  const [state, setState] = useState({
+    submitting: false,
+    succeeded: false,
+    error: false,
+  });
+  const formRef = useRef<HTMLFormElement>(null);
+
+  // Use environment variables for EmailJS credentials
+  const EMAILJS_SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!;
+  const EMAILJS_TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!;
+  const EMAILJS_USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID!;
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setState({ submitting: true, succeeded: false, error: false });
+    try {
+      const emailjs = await import("emailjs-com");
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current!,
+        EMAILJS_USER_ID
+      );
+      setState({ submitting: false, succeeded: true, error: false });
+      formRef.current?.reset();
+    } catch {
+      setState({ submitting: false, succeeded: false, error: true });
+    }
+  }
+
   return (
     <section id="contact" className="py-16">
       <div className="container mx-auto px-6">
@@ -69,41 +101,87 @@ export default function Contact() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6 flex-1 flex flex-col justify-between">
-                <div>
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="flex flex-col gap-5"
+                >
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="firstName">First Name</Label>
-                      <Input id="firstName" placeholder="First Name" />
+                      <Input
+                        id="firstName"
+                        name="firstName"
+                        placeholder="First Name"
+                        required
+                      />
                     </div>
                     <div>
                       <Label htmlFor="lastName">Last Name</Label>
-                      <Input id="lastName" placeholder="Last Name" />
+                      <Input
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Last Name"
+                        required
+                      />
                     </div>
                   </div>
-                  <div className="mt-5">
+                  <div>
                     <Label htmlFor="email">Email</Label>
-                    <Input id="email" type="email" placeholder="Your Email" />
+                    <Input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="Your Email"
+                      required
+                    />
                   </div>
-                  <div className="mt-5">
+                  <div>
                     <Label htmlFor="number">Phone Number</Label>
-                    <Input id="number" placeholder="Your Number" />
+                    <Input
+                      id="number"
+                      name="number"
+                      placeholder="Your Number"
+                    />
                   </div>
-                  <div className="mt-5">
+                  <div>
                     <Label htmlFor="company">Company</Label>
-                    <Input id="company" placeholder="Your Company" />
+                    <Input
+                      id="company"
+                      name="company"
+                      placeholder="Your Company"
+                    />
                   </div>
-                  <div className="mt-5">
+                  <div>
                     <Label htmlFor="message">Message</Label>
                     <Textarea
                       id="message"
+                      name="message"
                       placeholder="Leave us a message..."
                       rows={4}
+                      required
                     />
                   </div>
-                </div>
-                <Button className="w-full bg-black hover:bg-gray-800 text-white mt-4">
-                  Send Message
-                </Button>
+                  {/* EmailJS does not require a honeypot field */}
+                  {/* Success/Error Feedback */}
+                  {state.succeeded && (
+                    <div className="text-green-600 text-center">
+                      Thank you! Your message has been sent.
+                    </div>
+                  )}
+                  {state.error && (
+                    <div className="text-red-600 text-center">
+                      Sorry, there was an error. Please try again.
+                    </div>
+                  )}
+                  <Button
+                    type="submit"
+                    className="w-full bg-black hover:bg-gray-800 text-white mt-4"
+                    disabled={state.submitting}
+                  >
+                    {state.submitting ? "Sending..." : "Send Message"}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </motion.div>
