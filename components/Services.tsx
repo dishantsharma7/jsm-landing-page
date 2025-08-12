@@ -89,7 +89,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-16">
+    <section id="services" className="py-16">
       <div className="container mx-auto px-6">
         <motion.div
           className="mb-16 flex flex-col md:flex-row md:items-center md:justify-between gap-8"

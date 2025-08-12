@@ -25,7 +25,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
   return (
-    <section className="py-16">
+    <section id="contact" className="py-16">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"

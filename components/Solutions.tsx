@@ -74,7 +74,7 @@ export default function Solutions() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section id="solutions" className="py-16 bg-white">
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"

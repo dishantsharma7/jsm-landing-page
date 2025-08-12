@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="pt-24 pb-16 overflow-hidden">
+    <section id="home" className="pt-24 pb-16 overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
