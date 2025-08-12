@@ -12,6 +12,7 @@ import Testimonials from "@/components/Testimonials";
 import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AboutUs from "@/components/AboutUs";
 
 export default function Portfolio() {
   // Removed unused state and props for Header and TechStack
@@ -20,6 +21,7 @@ export default function Portfolio() {
     <div className="min-h-screen bg-white text-black">
       <Header />
       <Hero />
+      <AboutUs />
       <Clients />
       <Services />
       <Solutions />

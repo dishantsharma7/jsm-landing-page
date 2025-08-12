@@ -17,22 +17,34 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   Web Development
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   Mobile Apps
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   Cloud Solutions
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#services"
+                  className="hover:text-white transition-colors"
+                >
                   Consulting
                 </a>
               </li>
@@ -43,7 +55,10 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#about-us"
+                  className="hover:text-white transition-colors"
+                >
                   About Us
                 </a>
               </li>
@@ -58,7 +73,10 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white transition-colors">
+                <a
+                  href="#contact"
+                  className="hover:text-white transition-colors"
+                >
                   Contact
                 </a>
               </li>

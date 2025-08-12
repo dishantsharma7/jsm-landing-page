@@ -36,12 +36,14 @@ export default function Hero() {
               forward in the digital landscape.
             </p>
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                size="lg"
-                className="bg-blue-600 hover:bg-black text-white px-8 py-4 text-lg"
-              >
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
+              <a href="#contact">
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-black text-white px-8 py-4 text-lg"
+                >
+                  Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </a>
             </motion.div>
           </motion.div>
 

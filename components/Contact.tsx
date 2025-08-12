@@ -176,7 +176,7 @@ export default function Contact() {
                   )}
                   <Button
                     type="submit"
-                    className="w-full bg-black hover:bg-gray-800 text-white mt-4"
+                    className="w-full bg-black hover:bg-blue-600 text-white mt-4"
                     disabled={state.submitting}
                   >
                     {state.submitting ? "Sending..." : "Send Message"}
