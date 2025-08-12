@@ -68,6 +68,9 @@ export default function Solutions() {
     {
       title: "Data Analytics",
     },
+    {
+      title: "IoT Development",
+    },
   ];
 
   return (

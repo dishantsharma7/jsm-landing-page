@@ -35,84 +35,84 @@ export default function TechStack() {
     frameworks: [
       {
         name: "React",
-        image: "/placeholder.svg?height=100&width=100&text=React",
+        image: "/tech-stack/frameworks/react.png",
       },
       {
         name: "Angular",
-        image: "/placeholder.svg?height=100&width=100&text=Next",
+        image: "tech-stack/frameworks/angular.png",
       },
       {
         name: "Node.js",
-        image: "/placeholder.svg?height=100&width=100&text=Node",
+        image: "tech-stack/frameworks/node.png",
       },
       {
         name: "Django",
-        image: "/placeholder.svg?height=100&width=100&text=Django",
+        image: "tech-stack/frameworks/django.png",
       },
       {
         name: "Laravel",
-        image: "/placeholder.svg?height=100&width=100&text=Spring",
+        image: "tech-stack/frameworks/laravel.png",
       },
     ],
     cloud: [
-      { name: "AWS", image: "/placeholder.svg?height=100&width=100&text=AWS" },
+      { name: "AWS", image: "tech-stack/cloud/aws.png" },
       {
         name: "Google Cloud",
-        image: "/placeholder.svg?height=100&width=100&text=GCP",
+        image: "tech-stack/cloud/google-cloud.png",
       },
       {
         name: "Azure",
-        image: "/placeholder.svg?height=100&width=100&text=Azure",
+        image: "tech-stack/cloud/azure.png",
       },
     ],
     database: [
       {
         name: "PostgreSQL",
-        image: "/placeholder.svg?height=100&width=100&text=Postgres",
+        image: "tech-stack/databases/postgres.png",
       },
       {
         name: "MongoDB",
-        image: "/placeholder.svg?height=100&width=100&text=Mongo",
+        image: "tech-stack/databases/mongo.png",
       },
       {
         name: "MySQL",
-        image: "/placeholder.svg?height=100&width=100&text=MySQL",
+        image: "tech-stack/databases/mysql.png",
       },
       {
         name: "Oracle",
-        image: "/placeholder.svg?height=100&width=100&text=MySQL",
+        image: "tech-stack/databases/oracle.png",
       },
     ],
     blockchain: [
       {
         name: "Ethereum",
-        image: "/placeholder.svg?height=100&width=100&text=ETH",
+        image: "tech-stack/blockchain/ethereum.png",
       },
       {
         name: "Solidity",
-        image: "/placeholder.svg?height=100&width=100&text=Sol",
+        image: "tech-stack/blockchain/solidity.png",
       },
       {
         name: "Hyperledger",
-        image: "/placeholder.svg?height=100&width=100&text=Hyper",
+        image: "tech-stack/blockchain/hyperledger.png",
       },
     ],
     cybersecurity: [
       {
         name: "Firewall",
-        image: "/placeholder.svg?height=100&width=100&text=OWASP",
+        image: "tech-stack/security/firewall.png",
       },
       {
         name: "IDS/IPS",
-        image: "/placeholder.svg?height=100&width=100&text=PenTest",
+        image: "tech-stack/security/ids.png",
       },
       {
         name: "SIEM",
-        image: "/placeholder.svg?height=100&width=100&text=SSL",
+        image: "tech-stack/security/siem.png",
       },
       {
         name: "Encryption",
-        image: "/placeholder.svg?height=100&width=100&text=Encrypt",
+        image: "tech-stack/security/encryption.png",
       },
     ],
   };
@@ -123,7 +123,7 @@ export default function TechStack() {
     { id: "cloud", label: "Cloud Platforms", icon: "☁️" },
     { id: "database", label: "Databases", icon: "🗄️" },
     { id: "blockchain", label: "Blockchain", icon: "⛓️" },
-    { id: "cybersecurity Tools", label: "Security", icon: "🔒" },
+    { id: "cybersecurity", label: "Cybersecurity Tools", icon: "🔒" },
   ];
 
   return (
