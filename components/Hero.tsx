@@ -55,7 +55,7 @@ export default function Hero() {
           >
             <div className="relative">
               <img
-                src="/herosection/hero-1.png"
+                src="/herosection/herosection-1.avif"
                 alt="Hero"
                 className="w-full h-auto rounded-2xl shadow-2xl"
               />
