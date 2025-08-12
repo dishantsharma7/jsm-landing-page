@@ -31,6 +31,14 @@ export default function Hero() {
               IT Software Services Company{" "}
               {/* <span className="text-blue-600"> Future</span> */}
             </span>
+            <span className="text-5xl lg:text-5xl font-normal mb-6 leading-tight">
+              |
+            </span>{" "}
+            <span className="text-5xl lg:text-5xl font-bold mb-6 leading-tight">
+              {" "}
+              Software & IOT Development{" "}
+              {/* <span className="text-blue-600"> Future</span> */}
+            </span>
             <p className="text-xl text-gray-600 mb-8 leading-relaxed">
               We provide the expertise and support to propel your business
               forward in the digital landscape.
